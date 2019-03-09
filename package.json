@@ -4,8 +4,8 @@
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "eject": "expo eject"
-    
+    "eject": "expo eject",
+    "lint": "eslint ./src/*"
   },
   "dependencies": {
     "expo": "^32.0.0",
@@ -16,8 +16,13 @@
     "@types/expo": "^32.0.6",
     "@types/react": "^16.8.7",
     "@types/react-native": "^0.57.38",
+    "@typescript-eslint/eslint-plugin": "^1.4.2",
+    "@typescript-eslint/parser": "^1.4.2",
     "babel-preset-expo": "^5.0.0",
-    "typescript": "^3.3.3333"
+    "typescript": "^3.3.3333",
+    "eslint": "^5.15.1",
+    "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-react-hooks": "^1.4.0"
   },
   "private": true
 }
