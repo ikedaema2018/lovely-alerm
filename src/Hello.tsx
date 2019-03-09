@@ -1,12 +1,7 @@
 import React from 'react';
 import { Button, StyleSheet, Text, View } from 'react-native';
 
-interface OwnProps {
-    onIncrement: () => void;
-    onDecrement: () => void;
-}
-
-interface Props extends OwnProps {
+interface Props {
   	name: string;
   	enthusiasmLevel?: number;
 }
