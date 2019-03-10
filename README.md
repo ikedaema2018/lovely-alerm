@@ -8,3 +8,6 @@ expo start
 
 ## 構文チェック
 yarn run lint
+
+## デザイン
+https://xd.adobe.com/spec/48e12ab2-bc20-471d-54b9-7d6e895fb2e2-3ed0/
