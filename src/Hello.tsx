@@ -10,12 +10,31 @@ interface State {
     enthusiasmLevel: number;
 }
 
+const styles = StyleSheet.create({
+    root: {
+        alignItems: 'center',
+        alignSelf: 'center'
+    },
+    buttons: {
+        flexDirection: 'row',
+        alignItems: 'center'
+    },
+    button: {
+        fontSize: 20
+    },
+    greeting: {
+        color: 'gray',
+        fontWeight: 'bold',
+        fontSize: 30
+    }
+});
+
 class Hello extends React.Component<Props, State> {
     constructor(props: Props) {
         super(props);
 
         if ((props.enthusiasmLevel || 0) <= 0) {
-            throw new Error("You could be a little more enthusiastic :D");
+            throw new Error('You could be a little more enthusiastic :D');
         }
 
         this.state = {
@@ -33,13 +52,13 @@ class Hello extends React.Component<Props, State> {
         return (
             <View style={styles.root}>
                 <Text style={styles.greeting}>
-                    Hello{" "}
+                    Hello{' '}
                     { this.props.name + this.getExclamationMarks(this.state.enthusiasmLevel) }
                 </Text>
 
                 <View style={styles.buttons}>
-                    <Button title="decrement" onPress={this.onDecrement} color="red"></Button>
-                    <Button title="increment" onPress={this.onIncrement} color="blue" />
+                    <Button title='decrement' onPress={this.onDecrement} color='red'></Button>
+                    <Button title='increment' onPress={this.onIncrement} color='blue' />
                 </View>
             </View>
         )
@@ -48,22 +67,3 @@ class Hello extends React.Component<Props, State> {
 
 export default Hello;
 
-
-const styles = StyleSheet.create({
-    root: {
-      alignItems: "center",
-      alignSelf: "center"
-    },
-    buttons: {
-      flexDirection: "row",
-      alignItems: "center"
-    },
-    button: {
-      fontSize: 20
-    },
-    greeting: {
-      color: "gray",
-      fontWeight: "bold",
-      fontSize: 30
-    }
-  });
